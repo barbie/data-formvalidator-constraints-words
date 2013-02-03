@@ -1,21 +1,25 @@
 # Changes log for Data::FormValidator::Constraints::Words
 
-0.05    11/07/2011
-	- now released under the Artistic License v2.
-	- included META.json and Test::CPAN::Meta::JSON tests.
-	- patterns now strings not compiled regular expressions.
+        - removed Artistic file.
+        - change file dates changed to meet W3CDTF standards.
+        - spelling fixes. (thanks to Florian Schlichting & Gregor Herrmann).
 
-0.04    10/08/2009
-	- updates to various package files
-	- added 95changedate.t test file
+0.05    2011-07-11
+        - now released under the Artistic License v2.
+        - included META.json and Test::CPAN::Meta::JSON tests.
+        - patterns now strings not compiled regular expressions.
 
-0.03    28/03/2008
-	- fixed 5.005 issues with 'our' (Slaven Rezic)
+0.04    2009-08-10
+        - updates to various package files
+        - added 95changedate.t test file
 
-0.02    20/01/2008
-	- added requires DFV to META.yml
-	- corrected Changes file
+0.03    2008-03-28
+        - fixed 5.005 issues with 'our' (Slaven Rezic)
 
-0.01    20/01/2008
+0.02    2008-01-20
+        - added requires DFV to META.yml
+        - corrected Changes file
+
+0.01    2008-01-20
         - Initial release.
-	- extracted from Labyrinth source code
+        - extracted from Labyrinth source code
