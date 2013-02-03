@@ -1,0 +1,6 @@
+# Changes log for Data::FormValidator::Constraints::Words
+
+0.01    current
+        - Initial release.
+	- extracted from Labyrinth source code
+	- Devel::Cover = 0%
