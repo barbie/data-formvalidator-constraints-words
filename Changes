@@ -1,5 +1,10 @@
 # Changes log for Data::FormValidator::Constraints::Words
 
+0.05    11/07/2011
+	- now released under the Artistic License v2.
+	- included META.json and Test::CPAN::Meta::JSON tests.
+	- patterns now strings not compiled regular expressions.
+
 0.04    10/08/2009
 	- updates to various package files
 	- added 95changedate.t test file

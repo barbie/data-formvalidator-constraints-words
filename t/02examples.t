@@ -20,7 +20,7 @@ my %examples = (
     ''              => [ 0, '', '', undef, '', undef, 0, undef, '', undef ],
     'hello'         => [ 1, 'hello', 1, 'hello', 1, 'hello', 1, 'hello', 1, 'hello' ],
     'Pr;n+.5afe'    => [ 0, 'Prn.5afe', '', undef, 1, 'Pr;n+.5afe', 1, 'Pr;n+.5afe', 1, 'Pr;n+.5afe' ],
-    '$@pare'        => [ 0, '@pare', '', undef, '', undef, 1, '$@pare', 1, '$@pare' ],
+    '$@pare'        => [ 0, 'pare', '', undef, '', undef, 1, '$@pare', 1, '$@pare' ],
 );
 
 for my $ex (keys %examples) {

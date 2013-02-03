@@ -1,0 +1,55 @@
+{
+    "name": "Data-FormValidator-Constraints-Words",
+    "version": "0.05",
+    "abstract": "Data constraints for word inputs.",
+    "author": ["Barbie <barbie@cpan.org>"],
+
+    "license": "artistic_2",
+    "dynamic_config" : 0,
+    "release_status" : "stable",
+    "meta-spec": {
+        "version": "2",
+        "url": "http://search.cpan.org/dist/CPAN-Meta/lib/CPAN/Meta/Spec.pm"
+    },
+    "generated_by": "Hand 1.0",
+    "keywords" : [
+        "cgi",
+        "form",
+        "validation"
+    ],
+
+    "prereqs" : {
+        "runtime" : {
+            "recommends" : {
+                "Data::FormValidator": "0"
+            }
+        },
+        "test" : {
+            "requires": {
+                "Test::More": "0.70"
+            },
+            "recommends": {
+                "Test::More": "0.70",
+                "Test::Pod": "1.00",
+                "Test::Pod::Coverage": "0.08",
+                "Test::CPAN::Meta": "0.13",
+                "Test::CPAN::Meta::JSON": "0.10"
+            }
+        }
+    },
+
+    "provides": {
+        "Data::FormValidator::Constraints::Words": {
+            "file": "lib/Data/FormValidator/Constraints/Words.pm",
+            "version": "0.05"
+        }
+    },
+    "no_index": {
+        "directory": ["t","examples"]
+    },
+
+    "resources": {
+        "license": "http://dev.perl.org/licenses/",
+        "bugtracker": { "web": "http://rt.cpan.org/Public/Dist/Display.html?Name=Data-FormValidator-Constraints-Words" }
+    }
+}

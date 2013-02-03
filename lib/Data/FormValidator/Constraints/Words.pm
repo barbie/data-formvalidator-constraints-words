@@ -5,7 +5,7 @@ use warnings;
 
 use vars qw($VERSION $AUTOLOAD
             $REALNAME $BASICWORDS $SIMPLEWORDS $PRINTSAFE $PARAGRAPH);
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 =head1 NAME
 
@@ -80,11 +80,11 @@ considered control characters in the ISO Latin 1 character set. If you wish to
 override these settings, subclass this module and set the appropriate values
 for the following regular expression settings:
 
-  $REALNAME    = qr/\-\s\w.,\'\xC0-\xFF/;
-  $BASICWORDS  = qr/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
-  $SIMPLEWORDS = qr/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
-  $PRINTSAFE   = qr/\s\x20-\x7E\xA0-\xFF/;
-  $PARAGRAPH   = qr/\s\x20-\x7E\xA0-\xFF/;
+  $REALNAME    = q/\-\s\w.,\'\xC0-\xFF/;
+  $BASICWORDS  = q/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
+  $SIMPLEWORDS = q/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
+  $PRINTSAFE   = q/\s\x20-\x7E\xA0-\xFF/;
+  $PARAGRAPH   = q/\s\x20-\x7E\xA0-\xFF/;
 
 Note that these are used within a character class, so characters such as '-'
 must be escaped.
@@ -94,11 +94,11 @@ subclassed.
 
 =cut
 
-$REALNAME    = qr/\-\s\w.,\'\xC0-\xFF/;
-$BASICWORDS  = qr/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
-$SIMPLEWORDS = qr/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
-$PRINTSAFE   = qr/\s\x20-\x7E\xA0-\xFF/;
-$PARAGRAPH   = qr/\s\x20-\x7E\xA0-\xFF/;
+$REALNAME    = q/\-\s\w.,\'\xC0-\xFF/;
+$BASICWORDS  = q/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
+$SIMPLEWORDS = q/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
+$PRINTSAFE   = q/\s\x20-\x7E\xA0-\xFF/;
+$PARAGRAPH   = q/\s\x20-\x7E\xA0-\xFF/;
 
 #----------------------------------------------------------------------------
 # Subroutines
@@ -315,10 +315,10 @@ Miss Barbell Productions, L<http://www.missbarbell.co.uk/>
 
 =head1 COPYRIGHT & LICENSE
 
-  Copyright (C) 2002-2008 Barbie for Miss Barbell Productions
+  Copyright (C) 2002-2011 Barbie for Miss Barbell Productions
   All Rights Reserved.
 
   This module is free software; you can redistribute it and/or
-  modify it under the same terms as Perl itself.
+  modify it under the Artistic Licence v2.
 
 =cut
