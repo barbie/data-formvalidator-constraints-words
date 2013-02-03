@@ -3,8 +3,9 @@ package Data::FormValidator::Constraints::Words;
 use strict;
 use warnings;
 
-use vars qw($VERSION $AUTOLOAD);
-$VERSION = '0.02';
+use vars qw($VERSION $AUTOLOAD
+            $REALNAME $BASICWORDS $SIMPLEWORDS $PRINTSAFE $PARAGRAPH);
+$VERSION = '0.03';
 
 =head1 NAME
 
@@ -79,11 +80,11 @@ considered control characters in the ISO Latin 1 character set. If you wish to
 override these settings, subclass this module and set the appropriate values
 for the following regular expression settings:
 
-  our $REALNAME    = qr/\-\s\w.,\'\xC0-\xFF/;
-  our $BASICWORDS  = qr/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
-  our $SIMPLEWORDS = qr/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
-  our $PRINTSAFE   = qr/\s\x20-\x7E\xA0-\xFF/;
-  our $PARAGRAPH   = qr/\s\x20-\x7E\xA0-\xFF/;
+  $REALNAME    = qr/\-\s\w.,\'\xC0-\xFF/;
+  $BASICWORDS  = qr/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
+  $SIMPLEWORDS = qr/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
+  $PRINTSAFE   = qr/\s\x20-\x7E\xA0-\xFF/;
+  $PARAGRAPH   = qr/\s\x20-\x7E\xA0-\xFF/;
 
 Note that these are used within a character class, so characters such as '-'
 must be escaped.
@@ -93,11 +94,11 @@ subclassed.
 
 =cut
 
-our $REALNAME    = qr/\-\s\w.,\'\xC0-\xFF/;
-our $BASICWORDS  = qr/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
-our $SIMPLEWORDS = qr/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
-our $PRINTSAFE   = qr/\s\x20-\x7E\xA0-\xFF/;
-our $PARAGRAPH   = qr/\s\x20-\x7E\xA0-\xFF/;
+$REALNAME    = qr/\-\s\w.,\'\xC0-\xFF/;
+$BASICWORDS  = qr/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
+$SIMPLEWORDS = qr/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
+$PRINTSAFE   = qr/\s\x20-\x7E\xA0-\xFF/;
+$PARAGRAPH   = qr/\s\x20-\x7E\xA0-\xFF/;
 
 #----------------------------------------------------------------------------
 # Subroutines

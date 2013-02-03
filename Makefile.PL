@@ -3,7 +3,7 @@ WriteMakefile(
     'NAME'			=> 'Data::FormValidator::Constraints::Words',
     'VERSION_FROM'	=> 'lib/Data/FormValidator/Constraints/Words.pm',
     'PREREQ_PM'		=> {
-		Test::More	        => 0.70,	# for testing
+		Test::More	=> 0.70,	# for testing
 	},
 	NO_META			=> 1,
 

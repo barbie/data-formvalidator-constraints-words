@@ -1,5 +1,8 @@
 # Changes log for Data::FormValidator::Constraints::Words
 
+0.03    28/03/2008
+	- fixed 5.005 issues with 'our' (Slaven Rezic)
+
 0.02    20/01/2008
 	- added requires DFV to META.yml
 	- corrected Changes file
