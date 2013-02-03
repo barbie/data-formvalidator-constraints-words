@@ -1,6 +1,9 @@
 # Changes log for Data::FormValidator::Constraints::Words
 
-0.01    current
+0.02    20/01/2008
+	- added requires DFV to META.yml
+	- corrected Changes file
+
+0.01    20/01/2008
         - Initial release.
 	- extracted from Labyrinth source code
-	- Devel::Cover = 0%
