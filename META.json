@@ -1,7 +1,7 @@
 {
     "name": "Data-FormValidator-Constraints-Words",
     "version": "0.05",
-    "abstract": "Data constraints for word inputs.",
+    "abstract": "A contraints module of word patterns for Data::FormValidator",
     "author": ["Barbie <barbie@cpan.org>"],
 
     "license": "artistic_2",
@@ -20,20 +20,23 @@
 
     "prereqs" : {
         "runtime" : {
+            "requires" : {
+                "perl": "5.006"
+            },
             "recommends" : {
                 "Data::FormValidator": "0"
             }
         },
         "test" : {
             "requires": {
+                "IO::File": "0",
                 "Test::More": "0.70"
             },
             "recommends": {
-                "Test::More": "0.70",
+                "Test::CPAN::Meta": "0",
+                "Test::CPAN::Meta::JSON": "0",
                 "Test::Pod": "1.00",
-                "Test::Pod::Coverage": "0.08",
-                "Test::CPAN::Meta": "0.13",
-                "Test::CPAN::Meta::JSON": "0.10"
+                "Test::Pod::Coverage": "0.08"
             }
         }
     },
@@ -49,7 +52,12 @@
     },
 
     "resources": {
-        "license": "http://dev.perl.org/licenses/",
-        "bugtracker": { "web": "http://rt.cpan.org/Public/Dist/Display.html?Name=Data-FormValidator-Constraints-Words" }
+        "license": "http://www.perlfoundation.org/artistic_license_2_0",
+        "bugtracker": { "web": "http://rt.cpan.org/Public/Dist/Display.html?Name=Data-FormValidator-Constraints-Words" },
+        "repository": {
+            "url": "git://github.com/barbie/data-formvalidator-constraints-words.git",
+            "web": "http://github.com/barbie/data-formvalidator-constraints-words",
+            "type": "git"
+        }
     }
 }

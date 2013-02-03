@@ -15,18 +15,20 @@ DEPENDENCIES
 Although not exactly a dependency, the following was the intended target for
 this distribution:
 
-  Data::FormValidator >= 0
+  Data::FormValidator
 
 For testing purposes, the following modules are required:
 
-  Test::More          >= 0.70
+  IO::File
+  Test::More
 
 For testing purposes, the following modules are desireable, but not essential:
 
-  Test::Pod           >= 1.00
-  Test::Pod::Coverage >= 0.08
   Pod::Coverage
-  Test::CPAN::Meta    >= 1.13
+  Test::CPAN::Meta
+  Test::CPAN::Meta::JSON
+  Test::Pod
+  Test::Pod::Coverage
 
 INSTALLATION
 
@@ -59,14 +61,6 @@ supply a patch.
 Fixes are dependent upon their severity and my availability. Should a fix not
 be forthcoming, please feel free to (politely) remind me.
 
-DSLIP
-
-  b - Beta testing
-  d - Developer
-  p - Perl-only
-  O - Object oriented
-  p - Standard-Perl: user may choose between GPL and Artistic
-
 AUTHOR
 
 Barbie <barbie@cpan.org>
@@ -74,11 +68,7 @@ for Miss Barbell Productions http://www.missbarbell.co.uk.
 
 COPYRIGHT AND LICENSE
 
-  Copyright (C) 2008,2009 Barbie for Miss Barbell Productions.
+  Copyright (C) 2008-2013 Barbie for Miss Barbell Productions.
 
-  This distribution is free software; you can redistribute it and/or 
-  modify it under the same terms as Perl itself.
-
-The full text of the licenses can be found in the Artistic file included with
-this distribution, or in perlartistic file available with your Perl 
-installation.
+  This distribution is free software; you can redistribute it and/or
+  modify it under the Artistic Licence v2.

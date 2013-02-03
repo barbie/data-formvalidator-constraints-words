@@ -3,6 +3,9 @@
         - removed Artistic file.
         - change file dates changed to meet W3CDTF standards.
         - spelling fixes. (thanks to Florian Schlichting & Gregor Herrmann).
+        - added GitHub repo.
+        - added minimum perl version (5.006).
+        - reworked Makefile.PL for clarity.
 
 0.05    2011-07-11
         - now released under the Artistic License v2.
