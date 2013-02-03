@@ -1,5 +1,9 @@
 # Changes log for Data::FormValidator::Constraints::Words
 
+0.04    10/08/2009
+	- updates to various package files
+	- added 95changedate.t test file
+
 0.03    28/03/2008
 	- fixed 5.005 issues with 'our' (Slaven Rezic)
 

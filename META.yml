@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                     Data-FormValidator-Constraints-Words
-version:                  0.03
+version:                  0.04
 abstract:                 Data constraints for word inputs.
 author:
   - Barbie <barbie@cpan.org>
@@ -14,13 +14,14 @@ recommends:
   Test::More:             0.70
   Test::Pod:              1.00
   Test::Pod::Coverage:    0.08
+  Test::CPAN::Meta:       0.13
 build_requires:
   Test::More:             0.70
 
 provides:
   Data::FormValidator::Constraints::Words:
     file:     lib/Data/FormValidator/Constraints/Words.pm
-    version:  0.03
+    version:  0.04
 no_index:
   directory:
     - t
@@ -31,6 +32,6 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Data-FormValidator-Constraints-Words
 
 meta-spec:
-   version:   1.3
-   url:       http://module-build.sourceforge.net/META-spec-v1.3.html
+   version:   1.4
+   url:       http://module-build.sourceforge.net/META-spec-v1.4.html
 generated_by: Hand 1.0

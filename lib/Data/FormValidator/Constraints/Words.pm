@@ -5,7 +5,7 @@ use warnings;
 
 use vars qw($VERSION $AUTOLOAD
             $REALNAME $BASICWORDS $SIMPLEWORDS $PRINTSAFE $PARAGRAPH);
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 =head1 NAME
 

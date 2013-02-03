@@ -12,6 +12,11 @@ installers such as ExtUtils::MakeMaker, Module::Build and Module::Install.
 
 DEPENDENCIES
 
+Although not exactly a dependency, the following was the intended target for
+this distribution:
+
+  Data::FormValidator >= 0
+
 For testing purposes, the following modules are required:
 
   Test::More          >= 0.70
@@ -21,6 +26,7 @@ For testing purposes, the following modules are desireable, but not essential:
   Test::Pod           >= 1.00
   Test::Pod::Coverage >= 0.08
   Pod::Coverage
+  Test::CPAN::Meta    >= 1.13
 
 INSTALLATION
 
@@ -68,7 +74,7 @@ for Miss Barbell Productions http://www.missbarbell.co.uk.
 
 COPYRIGHT AND LICENSE
 
-  Copyright (C) 2008 Barbie for Miss Barbell Productions.
+  Copyright (C) 2008,2009 Barbie for Miss Barbell Productions.
 
   This module is free software; you can redistribute it and/or 
   modify it under the same terms as Perl itself.
