@@ -133,6 +133,7 @@ sub realname {
 
 sub valid_realname {
     my ($self,$word) = @_;
+    return 0    unless($word);
 	$word =~ m< ^( [$REALNAME]+ )$ >x ? 1 : 0;
 }
 
@@ -172,6 +173,7 @@ sub basicwords {
 
 sub match_basicwords {
     my ($self,$word) = @_;
+	return unless defined $word;
 	$word =~ m< ^( [$BASICWORDS]+ )$ >x ? $1 : undef;
 }
 
@@ -203,6 +205,7 @@ sub simplewords {
 
 sub match_simplewords {
     my ($self,$word) = @_;
+	return unless defined $word;
 	$word =~ m< ^( [$SIMPLEWORDS]+ )$ >x ? $1 : undef;
 }
 
@@ -234,6 +237,7 @@ sub printsafe {
 
 sub valid_printsafe {
     my ($self,$word) = @_;
+	return unless defined $word;
 	$word =~ m< ^( [$PRINTSAFE]+ )$ >x ? 1 : 0;
 }
 
@@ -272,6 +276,7 @@ sub paragraph {
 
 sub match_paragraph {
     my ($self,$word) = @_;
+	return unless defined $word;
 	$word =~ m< ^( [$PARAGRAPH]+ )$ >x ? $1 : undef;
 }
 
@@ -280,16 +285,13 @@ sub AUTOLOAD {
 
 	no strict qw/refs/;
 
-	$name =~ m/^(.*::)(valid_)(.*)/;
-
-	my ($pkg,$prefix,$sub) = ($1,$2,$3);
+	my ($pkg,$sub) = $name =~ m/^(.*::)valid_(.*)/;
+    return unless($sub);
 
     # All non-defined valid_* routines are essentially identical to their
     # match_* counterpart, we're going to generate them dynamically from
     # the appropriate match_* routine.
-	if ((defined $prefix) and ($prefix eq 'valid_')) {
-		return defined &{$pkg.'match_' . $sub}(@_);
-    }
+    return defined &{$pkg.'match_' . $sub}(@_);
 }
 
 1;
