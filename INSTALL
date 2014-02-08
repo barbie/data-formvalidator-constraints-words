@@ -97,7 +97,7 @@ If it worked, then become root and type:
 
     # make install
 
-Congratulations. You've just installed Data::Phrasebook.
+Congratulations. You've just installed Data::FormValidator::Constraints::Words::UTF8.
 
 If you have a copy of cpantest installed, type:
 
