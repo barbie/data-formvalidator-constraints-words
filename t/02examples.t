@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
 
-use Test::More tests => 70;
+use Test::More tests => 98;
 use Data::FormValidator::Constraints::Words;
 
 # list items:
@@ -27,6 +27,8 @@ my @examples = (
     [ 'hello',      1, 'hello',    1,  'hello', 1,  'hello',      1,     'hello',      1,  'hello',      1,  'hello', 1,  'hello'       ],
     [ 'Pr;n+.5afe', 0, 'Prn.5afe', '', undef,   1,  'Pr;n+.5afe', 1,     'Pr;n+.5afe', 1,  'Pr;n+.5afe', '', undef,   1,  'Pr;n+.5afe'  ],
     [ '$@pare',     0, 'pare',     '', undef,   '', undef,        1,     '$@pare',     1,  '$@pare',     '', undef,   1,  '$@pare'      ],
+    [ 'a to b',     1, 'a to b',   1, 'a to b', 1, 'a to b',      1,     'a to b',     1,  'a to b',     '', undef,   '', undef         ],
+    [ 'bãrbïé',     1, 'bãrbïé',   1, 'bãrbïé', 1, 'bãrbïé',      1,     'bãrbïé',     1,  'bãrbïé',     1, 'bãrbïé', 1,  'bãrbïé'      ],
 );
 
 for my $ex (@examples) {
