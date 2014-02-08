@@ -4,7 +4,8 @@ use strict;
 use warnings;
 
 use vars qw($VERSION $AUTOLOAD
-            $REALNAME $BASICWORDS $SIMPLEWORDS $PRINTSAFE $PARAGRAPH);
+            $REALNAME $BASICWORDS $SIMPLEWORDS $PRINTSAFE $PARAGRAPH
+            $USERNAME $PASSWORD);
 $VERSION = '0.06';
 
 =head1 NAME
@@ -21,6 +22,8 @@ Data::FormValidator::Constraints::Words - Data constraints for word inputs.
      simple_words   => simplewords(),
      print_safe     => printsafe(),
      paragraph      => paragraph(),
+     username       => username(),
+     password       => password(),
   },
 
   # or, use the regular functions
@@ -51,6 +54,8 @@ use vars qw($VERSION @ISA @EXPORT);
     simplewords	valid_simplewords	match_simplewords
 	printsafe	valid_printsafe		match_printsafe
     paragraph	valid_paragraph		match_paragraph
+    username	valid_username		match_username
+    password	valid_password		match_password
 );
 
 #----------------------------------------------------------------------------
@@ -76,21 +81,28 @@ a quick guide to what those ranges represent:
 
 The above table is based on the ISO Latin 1 (ISO 8859-1) set of encodings. The
 character range of 128-159 has no corresponding HTML entity encodings, and are
-considered control characters in the ISO Latin 1 character set. If you wish to
-override these settings, subclass this module and set the appropriate values
-for the following regular expression settings:
+considered control characters in the ISO Latin 1 character set. See 
+http://www.ascii-code.com/ for more details.
+
+If you wish to override these settings, subclass this module and set the 
+appropriate values for the following regular expression settings:
 
   $REALNAME    = q/\-\s\w.,\'\xC0-\xFF/;
   $BASICWORDS  = q/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
   $SIMPLEWORDS = q/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
   $PRINTSAFE   = q/\s\x20-\x7E\xA0-\xFF/;
   $PARAGRAPH   = q/\s\x20-\x7E\xA0-\xFF/;
+  $USERNAME    = q/\x30-\x39\x41-\x5A\x61-\x7A\x8A\x8C\x8E\x9A\x9C\x9E\x9F\xC0-\xFF/;
+  $PASSWORD    = q/\x21-\x7E\x80\x82-\x8C\x8E\x91-\x9C\x9E-\x9F\xA1-\xAC\xAE-\xFF/;
 
 Note that these are used within a character class, so characters such as '-'
 must be escaped.
 
 Although here PRINTSAFE and PARAGRAPH are the same, they may not be when
 subclassed.
+
+Both USERNAME and PASSWORD exclude whitespace characters, while USERNAME also
+excludes all symbol characters.
 
 =cut
 
@@ -99,6 +111,8 @@ $BASICWORDS  = q/\-\s\w.,\'\"&;:\?\#\xC0-\xFF/;
 $SIMPLEWORDS = q/\-\s\w.,\'\"&;:\?\#~\+=\(\)\[\]\{\}<>\/!\xC0-\xFF/;
 $PRINTSAFE   = q/\s\x20-\x7E\xA0-\xFF/;
 $PARAGRAPH   = q/\s\x20-\x7E\xA0-\xFF/;
+$USERNAME    = q/\x30-\x39\x41-\x5A\x61-\x7A\x8A\x8C\x8E\x9A\x9C\x9E\x9F\xC0-\xFF/;
+$PASSWORD    = q/\x21-\x7E\x80\x82-\x8C\x8E\x91-\x9C\x9E-\x9F\xA1-\xAC\xAE-\xFF/;
 
 #----------------------------------------------------------------------------
 # Subroutines
@@ -251,7 +265,7 @@ sub match_printsafe {
 =head2 paragraph
 
 The paragraph methods allows for a larger range of characters that would be
-expected to appear in a textarea inpout, such as a news story or a review.
+expected to appear in a textarea input, such as a news story or a review.
 Acceptable characters must match the $PARAGRAPH regular expression:
 
 =over 4
@@ -278,6 +292,70 @@ sub match_paragraph {
     my ($self,$word) = @_;
 	return unless defined $word;
 	$word =~ m< ^( [$PARAGRAPH]+ )$ >x ? $1 : undef;
+}
+
+=head2 username
+
+The username methods allows for a restricted range of letter only characters
+that would be expected to appear in a username style input field. Acceptable 
+characters must match the $USERNAME regular expression:
+
+=over 4
+
+=item * username
+
+=item * valid_username
+
+=item * match_username
+
+=back
+
+=cut
+
+sub username {
+	return sub {
+		my ($self,$word) = @_;
+		$self->set_current_constraint_name('username');
+		$self->valid_username($word);
+	}
+}
+
+sub match_username {
+    my ($self,$word) = @_;
+	return unless defined $word;
+	$word =~ m< ^( [$USERNAME]+ )$ >x ? $1 : undef;
+}
+
+=head2 password
+
+The password methods allows for a restricted range of characters that would be
+expected to appear in a password style input field. Acceptable characters must 
+match the $PASSWORD regular expression:
+
+=over 4
+
+=item * password
+
+=item * valid_password
+
+=item * match_password
+
+=back
+
+=cut
+
+sub password {
+	return sub {
+		my ($self,$word) = @_;
+		$self->set_current_constraint_name('password');
+		$self->valid_password($word);
+	}
+}
+
+sub match_password {
+    my ($self,$word) = @_;
+	return unless defined $word;
+	$word =~ m< ^( [$PASSWORD]+ )$ >x ? $1 : undef;
 }
 
 sub AUTOLOAD {
@@ -317,7 +395,7 @@ Miss Barbell Productions, L<http://www.missbarbell.co.uk/>
 
 =head1 COPYRIGHT & LICENSE
 
-  Copyright (C) 2002-2013 Barbie for Miss Barbell Productions
+  Copyright (C) 2002-2014 Barbie for Miss Barbell Productions
   All Rights Reserved.
 
   This distribution is free software; you can redistribute it and/or

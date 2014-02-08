@@ -1,5 +1,7 @@
 # Changes log for Data::FormValidator::Constraints::Words
 
+        - added USERNAME and PASSWORD, and associated methods.
+
 0.06    2013-02-03
         - removed Artistic file.
         - change file dates changed to meet W3CDTF standards.
