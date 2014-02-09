@@ -1,5 +1,6 @@
 # Changes log for Data::FormValidator::Constraints::Words
 
+0.07    2014-02-09
         - added USERNAME and PASSWORD, and associated methods.
 
 0.06    2013-02-03
