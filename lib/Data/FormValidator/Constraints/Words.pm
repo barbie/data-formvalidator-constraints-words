@@ -9,6 +9,8 @@ use vars qw($VERSION $AUTOLOAD
 
 $VERSION = '0.07';
 
+#----------------------------------------------------------------------------
+
 =head1 NAME
 
 Data::FormValidator::Constraints::Words - Data constraints for word inputs.
