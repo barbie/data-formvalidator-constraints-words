@@ -1,4 +1,7 @@
-# Changes log for Data::FormValidator::Constraints::Words
+Changes log for Data-FormValidator-Constraints-Words
+====================================================
+
+        - promote prerequisite Data::FormValidator to requires.
 
 0.07    2014-02-09
         - added USERNAME and PASSWORD, and associated methods.

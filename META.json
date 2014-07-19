@@ -21,9 +21,7 @@
     "prereqs" : {
         "runtime" : {
             "requires" : {
-                "perl": "5.006"
-            },
-            "recommends" : {
+                "perl": "5.006",
                 "Data::FormValidator": "0"
             }
         },
@@ -33,7 +31,6 @@
                 "Test::More": "0.70"
             },
             "recommends": {
-                "Data::FormValidator": "0",
                 "Test::CPAN::Meta": "0",
                 "Test::CPAN::Meta::JSON": "0",
                 "Test::Pod": "1.00",

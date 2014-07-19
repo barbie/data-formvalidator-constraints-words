@@ -8,11 +8,13 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     AUTHOR              => 'Barbie <barbie@cpan.org>',
-    NAME                => 'Data::FormValidator::Constraints::Words',
+    NAME                => 'Data-FormValidator-Constraints-Words',
     VERSION_FROM        => 'lib/Data/FormValidator/Constraints/Words.pm',
     ABSTRACT            => 'A contraints module of word patterns for Data::FormValidator',
     NO_META             => 1,
     PREREQ_PM => {
+
+        'Data::FormValidator'   => 0,
 
         # for testing
         'IO::File'              => 0,
