@@ -1,8 +1,8 @@
 #!/usr/bin/perl -w
 use strict;
 
-use Test::More tests => 98;
 use Data::FormValidator::Constraints::Words;
+use Test::More tests => 98;
 
 # list items:
 # 0 .... test pattern

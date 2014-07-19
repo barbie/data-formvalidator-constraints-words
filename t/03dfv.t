@@ -1,16 +1,9 @@
 #!/usr/bin/perl -w
 use strict;
 
-use Test::More;
-
-eval "use Data::FormValidator";
-if($@) {
-    plan skip_all => "Data::FormValidator required for testing intergration with DFV";
-} else {
-    plan tests => 42;
-}
-
+use Data::FormValidator;
 use Data::FormValidator::Constraints::Words;
+use Test::More tests => 42;
 
 my %rules = (
 		validator_packages => [qw(  Data::FormValidator::Constraints::Words )],
