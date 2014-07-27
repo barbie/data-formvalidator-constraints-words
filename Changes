@@ -1,7 +1,9 @@
 Changes log for Data-FormValidator-Constraints-Words
 ====================================================
 
+0.08    2014-07-27
         - promote prerequisite Data::FormValidator to requires.
+        - fixed distribution name in metadata.
 
 0.07    2014-02-09
         - added USERNAME and PASSWORD, and associated methods.
