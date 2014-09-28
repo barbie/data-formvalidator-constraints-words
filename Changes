@@ -2,6 +2,7 @@ Changes log for Data-FormValidator-Constraints-Words
 ====================================================
 
         - fixed license fields in META.json to be lists.
+        - extended META test suite.
 
 0.08    2014-07-27
         - promote prerequisite Data::FormValidator to requires.
