@@ -11,7 +11,7 @@ installdirs:              site
 
 requires:
   perl:                   5.006
-  Data::FormValidator:    0
+  Data::FormValidator:    4.00
 recommends:
   Test::CPAN::Meta:       0
   Test::CPAN::Meta::JSON: 0
