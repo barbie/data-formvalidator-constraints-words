@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
 
-use Data::FormValidator;
+use Data::FormValidator 4.00;
 use Data::FormValidator::Constraints::Words;
 use Test::More tests => 42;
 
