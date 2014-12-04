@@ -14,11 +14,11 @@ WriteMakefile(
     NO_META             => 1,
     PREREQ_PM => {
 
-        'Data::FormValidator'   => 0,
+        'Data::FormValidator'   => '4.00',
 
         # for testing
-        'IO::File'              => 0,
-        'Test::More'            => 0.70
+        'IO::File'              => '0',
+        'Test::More'            => '0.70'
 
     }
 );
