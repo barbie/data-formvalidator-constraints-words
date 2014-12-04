@@ -7,7 +7,7 @@ use vars qw($VERSION $AUTOLOAD
             $REALNAME $BASICWORDS $SIMPLEWORDS $PRINTSAFE $PARAGRAPH
             $USERNAME $PASSWORD);
 
-$VERSION = '0.09';
+$VERSION = '0.10';
 
 #----------------------------------------------------------------------------
 

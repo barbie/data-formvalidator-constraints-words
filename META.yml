@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                     Data-FormValidator-Constraints-Words
-version:                  0.09
+version:                  0.10
 abstract:                 A contraints module of word patterns for Data::FormValidator
 author:
   - Barbie <barbie@cpan.org>
@@ -24,7 +24,7 @@ build_requires:
 provides:
   Data::FormValidator::Constraints::Words:
     file:     lib/Data/FormValidator/Constraints/Words.pm
-    version:  0.09
+    version:  0.10
 no_index:
   directory:
     - t
